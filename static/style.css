@@ -1,0 +1,249 @@
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  body {
+      font-family: "Roboto", sans-serif;
+      background: url(bg-01.jpg) center/cover no-repeat;
+      color: #000;
+  }
+
+
+  /*style main*/
+
+  main {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+
+  .title {
+      font-size: 2.5rem;
+      color: #fff;
+      margin-bottom: 20px;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .mainSection {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .inputSection {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(7px);
+      border-radius: 10px 0px 0px 10px;
+      width: 25vw;
+      height: 60vh;
+  }
+
+  .formControls {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+  }
+
+  .outputSection {
+      height: 60vh;
+      width: 45vw;
+      border-radius: 0px 10px 10px 0px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(7px);
+
+  }
+
+  .inputText {
+      display: block;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid #803857;
+      border-radius: 5px;
+      font-size: 18px;
+      text-align: center;
+      padding: 25px;
+      resize: none;
+      margin-right: 10px;
+      margin-left: 10px;
+      width: 23vw;
+      height: 40vh;
+  }
+
+  .outputText {
+      padding: 40px 30px;
+      width: 100%;
+      height: 60vh;
+      overflow: auto;
+  }
+
+  .selectSection {
+      font-size: 18px;
+  }
+
+  .banner {
+      width: 120px;
+      padding: 10px;
+      border: 1px solid #803857;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.1);
+      font-size: 16px;
+      color: #333;
+      cursor: pointer;
+      margin: 15px 0px;
+  }
+
+  .inputText:focus,
+  .banner:focus {
+      border-color: #c06e7c !important;
+      outline: none;
+  }
+
+  .btn {
+      background-color: #803857;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin: 10px 0px;
+
+  }
+
+  .btn:hover {
+      background-color: #834b63;
+  }
+
+  textarea,
+  pre {
+      scrollbar-width: thin;
+      scrollbar-color: #FDE06F rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+  }
+
+  textarea::placeholder {
+      color: #803857;
+  }
+
+
+  /* Style Error Page*/
+
+  .errorSection {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      font-family: Arial, sans-serif;
+  }
+
+  .statusCode {
+      font-size: 8rem;
+      -webkit-text-fill-color: rgba(255, 255, 255, 0);
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #803857;
+      margin: 0;
+  }
+
+  .errorText {
+      font-size: 1.5rem;
+      color: #333;
+      margin: 10px 0 20px;
+  }
+
+  .btnBack {
+      text-decoration: none !important;
+      padding: 10px 20px;
+      background-color: #803857;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      display: block;
+      margin-top: 20px;
+  }
+
+  .btnBack:hover {
+      background-color: #834b63;
+  }
+
+
+
+  /* Responsive Design */
+
+  @media (max-width: 1024px) {
+      .mainSection {
+          flex-direction: column;
+          width: 95vw;
+      }
+
+      .inputSection {
+          width: 90vw;
+          height: 40vh;
+          border-radius: 10px 10px 0 0;
+          padding-bottom: 10px;
+      }
+
+      .outputSection {
+          width: 90vw;
+          height: 40vh;
+          border-radius: 0 0 10px 10px;
+      }
+
+      .inputText {
+        height: 25vh;
+        width: 80vw;
+      }
+
+      .outputText {
+          height: 100% !important;
+      }
+  }
+
+  @media (max-width: 600px) {
+      .title {
+          font-size: 1.8rem;
+          margin-bottom: 15px;
+      }
+
+      .inputSection,
+      .outputSection {
+          width: 95vw;
+          height: 40vh;
+          margin: 0;
+      }
+
+      .inputText {
+        height: 25vh;
+        padding: 15px;
+        font-size: 16px;
+      }
+
+      .outputText {
+          padding: 20px 15px;
+          height: 200px;
+          width: 100% !important;
+      }
+
+      .btn {
+          width: 90%;
+          padding: 10px;
+          font-size: 18px;
+      }
+
+      /* .main {
+          height: auto;
+          padding: 20px 0;
+      } */
+  }
