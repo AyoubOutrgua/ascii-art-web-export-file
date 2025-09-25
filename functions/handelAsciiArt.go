@@ -11,6 +11,11 @@ func HandelAsciiArt(inputText, banner string) (string, bool) {
 		return "", true
 	}
 
+	errHash := HashFiles()
+	if errHash != nil {
+		return "", true
+	}
+
 	// split input text to slice of string
 	wordsSlice := SplitInput(inputText)
 
