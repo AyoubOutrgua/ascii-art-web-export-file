@@ -33,6 +33,7 @@ func HandlerArtFunc(w http.ResponseWriter, r *http.Request) {
 		HandleError(w, "Bad Request!", http.StatusBadRequest)
 		return
 	}
+
 	cleanText := strings.ReplaceAll(text[0], "\r", "")
 	if len(cleanText) > 1000 {
 		HandleError(w, "Bad Request!", http.StatusBadRequest)

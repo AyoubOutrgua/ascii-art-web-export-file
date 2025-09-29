@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="/static/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -26,9 +27,13 @@
                                 <option value="thinkertoy">Thinkertoy</option>
                             </select>
                         </div>
-                        <textarea name="text" maxlength="1000" rows="10" cols="30" class="inputText" placeholder="your text here..."></textarea>
-                        
-                        <button type="submit" class="btn" >Submit</button>
+                        <textarea name="text" maxlength="1000" rows="10" cols="30" class="inputText"
+                            placeholder="your text here..."></textarea>
+                        <div>
+                            <button type="submit" class="btn">Submit</button>
+                            <input type="hidden" name="asciigen" value="{{.}}">
+                            <button type="submit" class="btn" formaction="/export" formmethod="POST">Export</button>
+                        </div>
                     </div>
                 </form>
             </div>
