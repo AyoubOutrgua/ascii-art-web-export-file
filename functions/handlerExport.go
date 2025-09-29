@@ -6,6 +6,10 @@ import (
 )
 
 func HandlerExport(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodPost {
+		HandleError(w, "Method Not Allowed!", http.StatusMethodNotAllowed)
+		return
+	}
 	asciArtGenerated := r.FormValue("asciigen")
 	if len(asciArtGenerated) == 0 {
 		HandleError(w, "Bad Request!", http.StatusBadRequest)
