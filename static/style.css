@@ -115,9 +115,11 @@
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s ease;
-      margin: 10px 0px;
+      margin: 10px 0px 0px;
 
   }
+
+
 
   .btn:hover {
       background-color: #834b63;
@@ -190,7 +192,7 @@
 
       .inputSection {
           width: 90vw;
-          height: 40vh;
+          height: 45vh;
           border-radius: 10px 10px 0 0;
           padding-bottom: 10px;
       }
@@ -217,10 +219,14 @@
           margin-bottom: 15px;
       }
 
-      .inputSection,
-      .outputSection {
+      .inputSection {
           width: 95vw;
-          height: 40vh;
+          height: 45vh;
+          margin: 0;
+      }
+      .outputSection {
+        width: 95vw;
+          height: 30vh;
           margin: 0;
       }
 
@@ -237,8 +243,8 @@
       }
 
       .btn {
-          width: 90%;
-          padding: 10px;
+          width: auto;
+          padding: 10px 20px;
           font-size: 18px;
       }
 
